@@ -1,0 +1,1 @@
+<?php /**PATH /home/experts3/nutridietplanner.in/test/FitnessMana/resources/views/frontend/class/bookClass_script.blade.php ENDPATH**/ ?>

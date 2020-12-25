@@ -1,0 +1,80 @@
+    <div class="login_BG">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="Signin_bg">
+                        <div class="login_logo ">
+                            <img src="<?php echo e(asset('assets-frontend/images/Header-logo.png')); ?>" alt="">
+                        </div>
+                        <div class="login-form-1">
+                            <h3>SIGN UP</h3>
+                            <form action="fr_sign_up_user" method="post">
+                                <?php echo csrf_field(); ?>
+                                <input type="hidden" name="loginType" id="loginType" value="email">
+                                <ul class="nav nav-tabs form-group login_btn">
+                                    <li onclick="myInput('email')" class="active"><a data-toggle="tab" class="active EMAIL_" href="#email">Email</a></li>
+                                    <li onclick="myInput('phone')"><a data-toggle="tab" class="MOBILE_" href="#mobile">Mobile</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="email" class="tab-pane fade in active show">
+                                        <div class="form-group">
+                                            <input type="email" name="Email" id="Email" class="form-control" placeholder="Please Enter Your Email" required />
+                                        </div>
+                                    </div>
+                                    <div id="mobile" class="tab-pane fade">
+                                        <div class="form-group">
+                                            <input type="text" name="Phone" id="Phone" class="form-control" placeholder="Please Enter Your Mobile Number"  oninput="this.value = this.value.replace(/[^0-9.]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" minlength="8" maxlength="12" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Name" id="Name" class="form-control" placeholder="Please Enter Your Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="SignUp_GroupId">Fitness Seekers or Provider</label>
+                                        <select name="SignUp_GroupId" class="form-control" id="SignUp_GroupId" required>
+                                            <option disabled selected>Please Select</option>
+                                            <option value="3">Fitness Seekers</option>
+                                            <option value="2">Fitness Provider</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="Password" id="Password" class="form-control" placeholder="Your Password *" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control" placeholder="Confirm Password *" required />
+                                    </div>
+                                    <div id="reg_message"></div>
+                                    <div class="form-group">
+                                        <a href="#" class="ForgetPwd">Forget Password?</a>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" id="Submit" class="btnSubmit S__Login" value="Login" />
+                                        <h6>OR</h6>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="tab-content">
+                                <div class="form-group">
+                                    <button onclick="window.location.href='google'" class="btnSubmit s__GMAIL">SIGN UP WITH GMAIL</button>
+                                </div>
+                                <div class="form-group">
+                                    <button  onclick="window.location.href='facebook'" class="btnSubmit S__FACEBOOK">SIGN UP WITH FACEBOOK</button>
+                                </div>
+                            </div>
+                                
+                        </div>
+                        <div class="Dont_have text-center p-2">
+                            <h6>Already have an account? <a href="login" style="font-weight: bold;">Login</a> </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 rightbg_img">
+                    <div class="girl-Img">
+                        <div>
+                            <img class="w-100 img-fluid d-sm-none d-md-block d-lg-block d-none" src="<?php echo e(asset('assets-frontend/images/login-signup/girl.png')); ?>" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><?php /**PATH /home/experts3/nutridietplanner.in/test/FitnessMana/resources/views/frontend/signup/signup.blade.php ENDPATH**/ ?>
